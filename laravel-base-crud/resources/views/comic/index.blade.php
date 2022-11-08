@@ -8,7 +8,15 @@
 </head>
 <body>
     @foreach ($Comics as $Comic)
-            <a href="{{route('comic.show', $Comic->id)}}">{{$Comic['Titolo']}}</a>
+            <div>
+                <a href="{{route('comic.show', $Comic->id)}}">{{$Comic['Titolo']}}</a>
+            </div>
+            <form action="{{route('comic.destroy', $Comic->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="Delete">
+            </form>
     @endforeach
+            <a href="{{route('comic.create')}}">Add comic</a>
 </body>
 </html>
