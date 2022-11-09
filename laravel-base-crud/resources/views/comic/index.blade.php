@@ -11,7 +11,7 @@
             <div>
                 <a href="{{route('comic.show', $Comic->id)}}">{{$Comic['Titolo']}}</a>
             </div>
-            <form action="{{route('comic.destroy', $Comic->id)}}" method="POST">
+            <form action="{{route('comic.destroy', $Comic->id)}}" method="POST" onsubmit="alert('Are you sure?')">
                 @csrf
                 @method('DELETE')
                 <input type="submit" value="Delete">
