@@ -16,6 +16,8 @@
                 @method('DELETE')
                 <input type="submit" value="Delete">
             </form>
+            <a href="{{route('comic.edit', $Comic->id)}}" method="GET">Change comic</a>
+
     @endforeach
             <a href="{{route('comic.create')}}">Add comic</a>
 </body>
