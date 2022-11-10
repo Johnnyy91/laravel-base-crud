@@ -23,13 +23,13 @@
 
         @endif
         <label for="Titolo">Inserisci titolo</label>
-        <input type="text" name="Titolo">
+        <input type="text" name="Titolo" value="{{ old('Titolo', '') }}">
         <label for="Copertina">Inserisci copertina</label>
-        <input type="text" name="Copertina">
+        <input type="text" name="Copertina" value="{{ old('Copertina', '') }}">
         <label for="type">Inserisci tipo</label>
-        <input type="text" name="type">
+        <input type="text" name="type" value="{{ old('type', '') }}">
         <label for="Description">Inserisci descrizione</label>
-        <input type="text" name="Description">
+        <input type="text" name="Description" value="{{ old('Description', '') }}">
         <input type="submit" value="Invio">
     </form>
 
