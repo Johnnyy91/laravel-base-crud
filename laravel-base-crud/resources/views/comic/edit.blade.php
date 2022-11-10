@@ -7,6 +7,7 @@
     <title>Edit-Document</title>
 </head>
 <body>
+
     <form action="{{route('comic.update', $comic->id)}}" method="post">
         @csrf
         @method('PUT')
@@ -20,5 +21,6 @@
         <input type="text" name="Description" value="{{$comic->Description}}">
         <input type="submit" value="Invio">
     </form>
+
 </body>
 </html>

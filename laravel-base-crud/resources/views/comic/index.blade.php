@@ -7,6 +7,7 @@
     <title>Comics</title>
 </head>
 <body>
+
     @foreach ($Comics as $Comic)
             <div>
                 <a href="{{route('comic.show', $Comic->id)}}">{{$Comic['Titolo']}}</a>
@@ -20,5 +21,6 @@
 
     @endforeach
             <a href="{{route('comic.create')}}">Add comic</a>
+
 </body>
 </html>

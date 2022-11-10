@@ -7,6 +7,7 @@
     <title>Form-Date</title>
 </head>
 <body>
+
     <form action="{{route('comic.store')}}" method="post">
         @csrf
         <label for="Titolo">Inserisci titolo</label>
@@ -19,5 +20,6 @@
         <input type="text" name="Description">
         <input type="submit" value="Invio">
     </form>
+
 </body>
 </html>
