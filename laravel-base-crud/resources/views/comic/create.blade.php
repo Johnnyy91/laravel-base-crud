@@ -10,6 +10,18 @@
 
     <form action="{{route('comic.store')}}" method="post">
         @csrf
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{$error}}</li>
+
+                @endforeach
+            </ul>
+
+        </div>
+
+        @endif
         <label for="Titolo">Inserisci titolo</label>
         <input type="text" name="Titolo">
         <label for="Copertina">Inserisci copertina</label>
